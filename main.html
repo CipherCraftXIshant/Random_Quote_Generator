@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+      }
+      #align {
+        text-align: center;
+        font-size: xxx-large;
+        background-color: rgba(34, 193, 228, 0.515);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        margin-bottom: 50px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 30px;
+        border-radius: 15px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #j,#i,#copyBtn{
+        border-width: 3px;
+        padding: 5px 20px;
+        font-size:small;
+        border-radius: 50px;
+        color: #ffffff;
+        transition: background-color 0.3s;
+        white-space: nowrap;
+      }
+      #fav{
+        margin: 5px ;
+        width: 20px;
+        height: 20px;
+      }
+      img{
+        border-radius: 50%;
+      }
+      .card {
+        overflow: hidden;
+        margin:30px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(129, 45, 85, 1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 30px;
+        font-size: x-large;
+        font-weight: 400;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .card1{
+        background-color: rgba(186, 76, 99,0.8);
+        color:#47fdc9;
+      }
+      .card2{
+        background-color: rgba(31, 164, 182,0.8);
+        color:#3e514d;
+      }
+      .card3{
+        background-color: rgba(19, 15, 15,0.8);
+        color:#ECF0F0;
+      }
+      .card4{
+        background-color: rgba(12, 154, 220, 0.8);
+        color:#c3eded;
+      }
+      .card5{
+        background-color: rgba(16, 55, 181, 0.8);
+        color:#EFC84A;
+      }
+      .card6{
+        background-color: rgba(204, 178, 163,0.8);
+        color: #2c3e50;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-image {
+        width: 100%;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover .card-image {
+        transform: scale(1.1);
+      }
+      #k{
+        border-width: 3px;
+        padding-block: 5px;
+        padding-left: 25px;
+        padding-right: 25px; 
+        font-size:medium;
+        margin: 10px;
+        border-radius: 100px;
+        color: aliceblue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      #k:hover {
+          background-color: #c0392b;
+      }
+      input{
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        font-size: large;
+      }
+    
+      footer{
+          background-color: rgb(44, 62, 80);
+      }
+      #quolit{
+        color: #ecf0f1;
+      }
+      .quote {
+      font-size: 40px;
+      width: 80%;
+      margin: 10px auto;
+      word-wrap: break-word;
+      }
+      .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .button-group {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 15px;
+      }
+      #save {
+          padding:5px;
+          font-size: large;
+          font-style: italic;
+          color: #2C3E50;
+      }
+          #nav {
+          font-size: x-large;
+          background: linear-gradient(45deg, #34495e, #2c3e50);
+          color: white;
+          padding: 10px 0;
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease-in-out;
+      }
+
+      #nav .nav-link {
+          color: #ecf0f1;
+          margin: 0 15px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      #nav .nav-link:hover {
+          color: #f1c40f;
+          transform: scale(1.04);
+      }
+
+      #nav .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      #nav .dropdown-menu {
+          background: rgba(44, 62, 80, 0.9);
+          border: none;
+          border-radius: 10px;
+      }
+
+      #nav .dropdown-menu .dropdown-item {
+          color: #ecf0f1;
+          transition: background 0.3s, color 0.3s;
+      }
+
+      #nav .dropdown-menu .dropdown-item:hover {
+          background: #f1c40f;
+          color: #2c3e50;
+      }
+
+      #nav .badge-danger {
+          background-color: #e74c3c;
+          font-size: 0.8rem;
+          margin-left: 5px;
+      }
+
+      #nav img:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s ease-in-out;
+      }
+
+      #background {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(45deg, #01F596, #00D7BC,#00BDDC);
+      background-size: 300% 300%;
+      animation: gradientAnimation 8s ease infinite;
+      background-repeat: no-repeat;
+      }
+
+      @keyframes gradientAnimation {
+          0% {
+              background-position: 0% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 0% 50%;
+          }
+      }
+      .button-group {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 15px;
+      }
+      .btn {
+          white-space: nowrap;
+      }
+      .quote {
+          font-size: 40px;
+          width: 80%;
+          margin: 10px auto;
+          word-wrap: break-word;
+          height: 120px;
+          overflow: hidden;
+      }
+      .quote-button {
+          font-size: medium;
+          border-radius: 50px;
+      }
+      
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100" id="background" >
+  <nav class="navbar navbar-expand-sm fixed-top" id="nav">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center">
+        <a href="main.html"><img src="data/logo1.png" alt="Logo" style="height: 40px; border-radius: 10px; width: 100px;"></a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavCenter">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavCenter">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="imp.html" id="quolit">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorite.html" target="_blank" id="quolit">Favorite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="main.html" target="_blank" id="quolit">Quolit</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse justify-content-end" id="navbarNavRight">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <div class="btn-group dropleft notifications d-none d-md-block"  style="margin-top: 5px;">
+              <button type="button" class="btn btn-warning dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="generateRandomQuotes()">
+                Notifications <span class="badge badge-danger">3</span>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="quoteDropdown">
+
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <br><br>
+    <div class="container-fluid p-5" id="align">
+    <form>
+        <div class="quote" id="quoteText">“The only way to do great work is to love what you do.”—Steve Jobs</div>
+        <div class="form-group">
+            <div><input type="checkbox" id="fav"><label for="fav" id="save">Save Favorite</label></div>
+        </div>
+        <div class="button-group">
+          <button type="button" class="btn btn-outline-success" id="j">Generate</button>
+          <a href="favorite.html" class="btn btn-outline-success" target="_blank" id="i">View Favorites</a>
+          <button type="button" class="btn btn-outline-warning" id="copyBtn">Copy Quote</button>
+          <button type="button" class="btn btn-warning" id="shareBtn">
+            <i class="fas fa-share-alt"></i>
+          </button>
+        </div>
+    </form>
+    </div>   
+        
+    <div class="row row-cols-md-3 g-5 mx-5">
+      <div class="col">
+        <div class="card card1">
+          <img src="data/friend.jpg" class="card-img-top" alt="friendship">
+          <div class="card-body">
+            <h3 class="card-title">Friendship</h3>
+            <p class="card-text" id="quoteDisplay1">"Success is the sum of small efforts - repeated day in and day out." — Robert Collier</p>
+            <form>
+              <input type="number" id="quoteNumber1" min="1" max="10" placeholder="1-10">
+              <button type="button" class="btn btn-outline-danger" onclick="generateQuotes1()" id="k">Generate</button>
+            </form>
+          </div>
+        </div><br>
+      </div>
+      
+      <div class="col">
+        <div class="card card2">
+          <img src="data/wisdom.jpg" class="card-img-top" alt="wisdom">
+          <div class="card-body">
+            <h3 class="card-title">Wisdom</h3>
+            <p class="card-text" id="quoteDisplay2">“The fool doth think he is wise, but the wise man knows himself to be a fool.” ― William Shakespeare</p>
+            <form>
+              <input type="number" min="1" max="10" placeholder="1-10" id="quoteNumber2">
+              <button type="button" class="btn btn-outline-danger" onclick="generateQuotes2()" id="k">Generate</button>
+            </form>
+          </div>
+        </div><br>
+      </div>
+      <div class="col">
+        <div class="card card3">
+            <img src="data/life.jpg" class="card-img-top" alt="life">
+            <div class="card-body">
+                <h3 class="card-title">Life</h3>
+                <p class="card-text" id="quoteDisplay3">"Being happy never goes out of style." — Lilly Pulitzer</p>
+                <form>
+                  <input type="number" min="1" max="10" placeholder="1-10" id="quoteNumber3">
+                  <button type="button" class="btn btn-outline-danger" onclick="generateQuotes3()" id="k">Generate</button>
+                </form>
+            </div>
+        </div><br>
+      </div>
+      <div class="col">
+        <div class="card card4">
+          <img src="data/success.jpg" class="card-img-top" alt="success">
+          <div class="card-body">
+            <h3 class="card-title">Success</h3>
+            <p class="card-text" id="quoteDisplay4">"Success is the sum of small efforts - repeated day in and day out." — Robert Collier</p>
+            <form>
+              <input type="number" min="1" max="10" placeholder="1-10" id="quoteNumber4">
+              <button type="button" class="btn btn-outline-danger" onclick="generateQuotes4()" id="k">Generate</button>
+            </form>
+          </div>
+        </div>
+      </div><br>
+      <div class="col">
+        <div class="card card5">
+          <img src="data/Time.jpg" class="card-img-top" alt="success">
+          <div class="card-body">
+            <h3 class="card-title">Time</h3>
+            <p class="card-text" id="quoteDisplay5">"Tough times never last, but tough people do" – Robert H. Schuller</p>
+            <form>
+              <input type="number" min="1" max="10" placeholder="1-10" id="quoteNumber5">
+              <button type="button" class="btn btn-outline-danger" onclick="generateQuotes5()" id="k">Generate</button>
+            </form>
+          </div>
+        </div>
+      </div><br>
+      <div class="col">
+        <div class="card card6">
+          <img src="data/Love.jpg" class="card-img-top" alt="success">
+          <div class="card-body">
+            <h3 class="card-title">Love</h3>
+            <p class="card-text" id="quoteDisplay6">"I swear I couldn’t love you more than I do right now, and yet I know I will tomorrow" - Leo Christopher</p>
+            <form>
+              <input type="number" min="1" max="10" placeholder="1-10" id="quoteNumber6">
+              <button type="button" class="btn btn-outline-danger" onclick="generateQuotes6()" id="k">Generate</button>
+            </form>
+          </div>
+        </div>
+      </div><br>
+    </div>
+    <footer class="text-center mt-5 py-3 text-light">
+        <p>&copy; 2024 Quolit | Bringing Inspiration to you by Ishant Sharma |</p>
+    </footer>
+    <script> 
+    document.getElementById('copyBtn').addEventListener('click', function() { 
+      var quoteText = document.getElementById('quoteText').innerText; 
+      var textArea = document.createElement('textarea'); 
+      textArea.value = quoteText; 
+      document.body.appendChild(textArea); 
+      textArea.select(); 
+      document.execCommand('copy'); 
+      document.body.removeChild(textArea); 
+      alert('Quote copied to clipboard'); });
+    </script>
+    <script> 
+      document.getElementById('shareBtn').addEventListener('click', function() { 
+        var quoteText = "http://127.0.0.1:5501/C3-RQG/main.html"; 
+        var textArea = document.createElement('textarea'); 
+        textArea.value = quoteText; 
+        document.body.appendChild(textArea); 
+        textArea.select(); 
+        document.execCommand('copy'); 
+        document.body.removeChild(textArea); 
+        alert('Quote copied to clipboard'); });
+      </script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
