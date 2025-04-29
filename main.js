@@ -29,7 +29,7 @@ let arr = [
     "“Better three hours too soon than a minute too late” – William Shakespeare",
     "“Never leave till tomorrow that which you can do today” – Benjamin Franklin",
     "“The two most powerful warriors are patience and time” – Leo Tolstoy",
-    "“Your time is limited, so don't waste it living someone else's life.” - Steve Jobs"
+    
 ];
 
 let fav = JSON.parse(localStorage.getItem('favQuotes')) || [];
