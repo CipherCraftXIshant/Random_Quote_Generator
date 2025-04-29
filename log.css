@@ -9,7 +9,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    color: #ffffff;
+    color: #582929;
   }
   
   /* Login Section Alignment */
@@ -21,7 +21,7 @@ body {
     height: 100%;
   }
   
-  /* Login Box Styling */
+  /* Login Styling */
   .login-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
