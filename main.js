@@ -247,6 +247,8 @@ document.getElementById('copyBtn').addEventListener('click', function() {
     textArea.value = quoteText;
     document.body.appendChild(textArea);
     textArea.select();
+  document.execCommand('copy');
+    document.body.removeChild(textArea);
    
     alert('Quote copied to clipboard');
 });
