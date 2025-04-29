@@ -46,6 +46,16 @@ body {
   margin-bottom: 20px;
 
 }
+/* Input Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Positions icon correctly */
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1.2rem; /* Adjust size for better visibility */
+  transition: 0.3s;
+}
 
 .input-box input {
   width: 100%;
