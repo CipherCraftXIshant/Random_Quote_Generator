@@ -12,7 +12,7 @@ body {
     color: #ffffff;
   }
   
-  /* Login Section Alignment */
+  /* Login  Alignment */
   #align {
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     height: 100%;
   }
   
-  /* Login Box Styling */
+  /* Login  Styling */
   .login-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
