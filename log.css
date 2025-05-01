@@ -23,10 +23,14 @@ body {
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Login Styling */
 =======
   /* Login  Styling */
 >>>>>>> f7ea04dd9fd9de06545f6b6ddfcc67547a9e7658
+=======
+
+>>>>>>> 1eb20b7ae67cfcd92f9851ded6505eb5f4adb952
   .login-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
