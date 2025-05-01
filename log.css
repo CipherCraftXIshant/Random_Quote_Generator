@@ -24,6 +24,7 @@ body {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Login Styling */
 =======
   /* Login  Styling */
@@ -31,8 +32,13 @@ body {
 =======
 
 >>>>>>> 1eb20b7ae67cfcd92f9851ded6505eb5f4adb952
+=======
+
+  /* Login  Styling */
+
+>>>>>>> 2b2bf958fad14bf3c9460004b9eb0016564668ec
   .login-box {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
