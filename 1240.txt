@@ -1,1 +1,1 @@
-new pproject
+new project
