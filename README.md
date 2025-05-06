@@ -1,1 +1,5 @@
+
+# Random Quote Generator is a powerfull tool that can help you to provide with the codes as much as like as friendship, relationship, happy etc. according to your needs and help you fell out of stress.
+
 # Random_Quote_Generator  is a powerfull tool that can help you to provide with the codes as much as like as friendship, relationship, happy etc. according to your needs and help you fell out of stress, anxiety in today's world.
+
