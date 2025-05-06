@@ -1,23 +1,194 @@
 green to red 
-how to makw eiy
-tyeah done
-what is this
-yweah
-ajejpj
-afjoa]
-fnaofj
-fnaofja
-faodj
-afnbafoa
-snhfapodk
-afhopfa
-fhodsk
-afnhoseifj\
-ascjdpokf
-asdxnhfod
-fhdpxf
-;jvpd
-xkf['d
-\jbf
-dfsjf['sd
-vjpsx;cjjf
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #2c3e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #8f6868;
+  }
+  
+  /* Login  Alignment */
+  #align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  /* Login Styling */
+=======
+  /* Login  Styling */
+>>>>>>> f7ea04dd9fd9de06545f6b6ddfcc67547a9e7658
+=======
+
+>>>>>>> 1eb20b7ae67cfcd92f9851ded6505eb5f4adb952
+=======
+
+  /* Login  Styling */
+
+>>>>>>> 2b2bf958fad14bf3c9460004b9eb0016564668ec
+  .login-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    padding: 40px 30px;
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  /* Login Heading */
+  .login-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #4ca1af;
+  }
+  
+ /* Input Box Styling */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+
+}
+/* Input Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Positions icon correctly */
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1.2rem; /* Adjust size for better visibility */
+  transition: 0.3s;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Added left padding to make space for the icon */
+  font-size: 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: #ffffff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom-color: #4ca1af;
+}
+
+.input-box label {
+  position: absolute;
+  left: 40px; /* Aligns with the input padding */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #ccc;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: #4ca1af;
+  font-size: 0.9rem;
+}
+
+
+
+.input-box input:focus ~ .icon,
+.input-box input:valid ~ .icon {
+  color: #4ca1af;
+}
+
+  
+  /* Remember Me and Forgot Password */
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .remember-forgot a {
+    color: #4ca1af;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Login Button */
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #4ca1af;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #3b8d99;
+    transform: scale(1.05);
+  }
+  
+  /* Register Link */
+  .register-link p {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+  
+  .register-link a {
+    color: #4ca1af;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .login-box {
+      width: 300px;
+      padding: 30px 20px;
+    }
+  }
+  label , p{
+    color: #ccc;
+  }
+  
