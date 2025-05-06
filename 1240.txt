@@ -1,1 +1,3 @@
 New project of source code management was made i.e. RANDOM QUOTE GENERATOR.
+and it is complete
+changed color to green from red
