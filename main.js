@@ -1,4 +1,5 @@
- /*30 Quotes*/
+// This is main page
+/*30 Quotes*/
 let arr = [
     "“The only way to do great work is to love what you do.”—Steve Jobs",
     "“Be yourself; everyone else is already taken.”—Oscar Wilde",
