@@ -1,2 +1,3 @@
 done issue
 issue clear
+if done say yes
