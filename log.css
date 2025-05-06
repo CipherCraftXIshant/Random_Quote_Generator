@@ -1,3 +1,4 @@
+/* Log css page */
 /* General body styling */
 body {
     margin: 0;
@@ -9,10 +10,10 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    color: #ffffff;
+    color: #8f6868;
   }
   
-  /* Login Section Alignment */
+  /* Login  Alignment */
   #align {
     display: flex;
     justify-content: center;
@@ -21,9 +22,23 @@ body {
     height: 100%;
   }
   
-  /* Login Box Styling */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  /* Login Styling */
+=======
+  /* Login  Styling */
+>>>>>>> f7ea04dd9fd9de06545f6b6ddfcc67547a9e7658
+=======
+
+>>>>>>> 1eb20b7ae67cfcd92f9851ded6505eb5f4adb952
+=======
+
+  /* Login  Styling */
+
+>>>>>>> 2b2bf958fad14bf3c9460004b9eb0016564668ec
   .login-box {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
@@ -45,6 +60,16 @@ body {
   position: relative;
   margin-bottom: 20px;
 
+}
+/* Input Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Positions icon correctly */
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1.2rem; /* Adjust size for better visibility */
+  transition: 0.3s;
 }
 
 .input-box input {
@@ -82,16 +107,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Input Icons */
-.icon {
-  position: absolute;
-  top: 50%;
-  left: 10px; /* Positions icon correctly */
-  transform: translateY(-50%);
-  color: #ccc;
-  font-size: 1.2rem; /* Adjust size for better visibility */
-  transition: 0.3s;
-}
+
 
 .input-box input:focus ~ .icon,
 .input-box input:valid ~ .icon {

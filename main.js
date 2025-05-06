@@ -1,4 +1,5 @@
- /*30 Quotes*/
+// This is main page
+/*30 Quotes*/
 let arr = [
     "“The only way to do great work is to love what you do.”—Steve Jobs",
     "“Be yourself; everyone else is already taken.”—Oscar Wilde",
@@ -29,7 +30,7 @@ let arr = [
     "“Better three hours too soon than a minute too late” – William Shakespeare",
     "“Never leave till tomorrow that which you can do today” – Benjamin Franklin",
     "“The two most powerful warriors are patience and time” – Leo Tolstoy",
-    "“Your time is limited, so don't waste it living someone else's life.” - Steve Jobs"
+    
 ];
 
 let fav = JSON.parse(localStorage.getItem('favQuotes')) || [];
@@ -247,7 +248,8 @@ document.getElementById('copyBtn').addEventListener('click', function() {
     textArea.value = quoteText;
     document.body.appendChild(textArea);
     textArea.select();
-    document.execCommand('copy');
+  document.execCommand('copy');
     document.body.removeChild(textArea);
+   
     alert('Quote copied to clipboard');
 });
